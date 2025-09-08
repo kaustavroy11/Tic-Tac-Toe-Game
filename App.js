@@ -70,8 +70,10 @@ const checkWinner = () => {
 
         if (posVal1 !== "" && posVal2 !== "" && posVal3 !== "") {
             if (posVal1 === posVal2 && posVal2 === posVal3) {
-                showWinner(posVal1);
                 winnerFound = true;
+                setTimeout(() => {
+                    showWinner(posVal1);
+                }, 1000);
                 return; // Exit early if winner is found
             }
         }
